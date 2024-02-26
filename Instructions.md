@@ -13,6 +13,8 @@
   <li><strong>Create a Google Docs Document:</strong>
     <ul>
       <li>Open your web browser and go to Google Docs (docs.google.com).</li>
+      ![image](https://github.com/taimoor-asghar/Automation-google-form-to-google-docs/assets/151550373/03c2e13c-04fc-493a-9a58-e1093a6f5a26)
+
       <li>Click on the "+" icon to create a new document.</li>
       <li>Title the document "Questionnaire".</li>
       <li>Write down your questionnaire in the document, leaving spaces for answers. For example:
