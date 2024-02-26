@@ -5,11 +5,15 @@ function onOpen() {
   menu.addToUi();
 }
 
+  // Get the Google Doc template file and the destination folder
 function createNewGoogleDocs() {
   const googleDocTemplate = DriveApp.getFileById('1matMRxgJEGBoHHGPUT5ZDc44vDBySM3U3fGZ2Pqlb2Y');
   const destinationFolder = DriveApp.getFolderById('1zMypxfbL3k7Vp4_So7LrOUydPIY_glX-');
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('form');
   const rows = sheet.getDataRange().getValues();
+
+
+  // Loop through each row in the sheet
 
   rows.forEach(function(row, index){
     if (index === 0) return;
@@ -20,7 +24,7 @@ function createNewGoogleDocs() {
     const body = doc.getBody();
     const friendlyDate = new Date(row[3]).toLocaleDateString();
     
-
+    // Replace placeholders in the document with data from the sheet
     body.replaceText('{{Timestamp}}', row[0]);
     body.replaceText('{{Email Address}}', row[1]);
     body.replaceText('{{Module}}', row[2]);
@@ -47,3 +51,6 @@ function createNewGoogleDocs() {
     sheet.getRange(index + 1, 26).setValue(url);
   });
 }
+
+// GitHub profile link: https://github.com/taimoor-asghar
+// Contact email: contact@ +923345538444
