@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Step-by-Step Instructions</title>
 </head>
 <body>
 
@@ -13,9 +12,17 @@
   <li><strong>Create a Google Docs Document:</strong>
     <ul>
       <li>Open your web browser and go to Google Docs (docs.google.com).</li>
-<img src="https://github.com/taimoor-asghar/Automation-google-form-to-google-docs/assets/151550373/03c2e13c-04fc-493a-9a58-e1093a6f5a26" alt="Google Forms to Google Docs Automation" style="max-width: 100%; height: auto;">
-
+  <img src="https://github.com/taimoor-asghar/Automation-google-form-to-google-docs/assets/151550373/03c2e13c-04fc-493a-9a58-e1093a6f5a26" alt="Google Forms to Google Docs Automation" style="max-width: 100%; height: auto;">
+    </ul>
+  </li>
+  <li>
+    <ul>
       <li>Click on the "+" icon to create a new document.</li>
+        <img src="https://github.com/taimoor-asghar/Automation-google-form-to-google-docs/assets/151550373/dc8fc374-0cf1-4bc3-8ebd-61bbb7644f00" alt="Google Forms to Google Docs Automation" style="max-width: 100%; height: auto;">
+    </ul>
+  </li>
+  <li>
+    <ul>
       <li>Title the document "Questionnaire".</li>
       <li>Write down your questionnaire in the document, leaving spaces for answers. For example:
         <pre><code>Question 1: {{answer 1}}
@@ -44,11 +51,13 @@ Question 2: {{answer 2}}</code></pre>
   </li>
 
   <li><strong>Link Form Responses to Google Sheets:</strong>
-    <ul>
-      <li>Once your form is created, click on the "Responses" tab at the top of the form.</li>
-      <li>In the upper-right corner, click on the Sheets icon (it looks like a spreadsheet).</li>
-      <li>A dialog will appear asking you to create a new spreadsheet or link to an existing one. Choose "Create a new spreadsheet" and click "Create".</li>
-    </ul>
+<ul>
+  <li>Once your form is created, click on the "Responses" tab at the top of the form.</li>
+  <li>In the upper-right corner, click on the Sheets icon (it looks like a spreadsheet).</li>
+  <li><img src="https://github.com/taimoor-asghar/Automation-google-form-to-google-docs/assets/151550373/841bebc5-754b-4169-bf8c-67180c9e40ce" alt="image"></li>
+  <li>A dialog will appear asking you to create a new spreadsheet or link to an existing one. Choose "Create a new spreadsheet" and click "Create".</li>
+</ul>
+
   </li>
 
   <li><strong>Add Google Apps Script for Automation:</strong>
@@ -60,7 +69,15 @@ Question 2: {{answer 2}}</code></pre>
       <li>Customize the code by replacing the file ID and destination ID with your actual Google Drive file IDs. You can find these IDs in the URL of your Google Docs folder and Google Sheets file respectively.</li>
     </ul>
   </li>
-
+  <li><strong>Use Triggers:</strong>
+    <ul>
+      <li>To create a trigger, click on the clock icon in the toolbar of the Apps Script editor.</li>
+      <li>Select the function you created (<code>createNewDoc</code>) as the function to run.</li>
+      <li>Choose the event source as "From form" and select the event type as "On form submit".</li>
+      <li>Save the trigger.</li>
+    </ul>
+  </li>
+  
   <li><strong>Save and Run the Script:</strong>
     <ul>
       <li>After updating the code, click on the disk icon or go to File > Save.</li>
